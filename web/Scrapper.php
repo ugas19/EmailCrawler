@@ -114,7 +114,7 @@ function sendToDataBase($email,$currentemail){
     $result=$conn->query($sql);
     if (!$result)
     {//IF DOESNT EXIST THEN MAKE ONE
-            // sql to create table
+        
         $sql = "CREATE TABLE $table (
         id INT(6) AUTO_INCREMENT PRIMARY KEY,
         url VARCHAR(100) NOT NULL,
