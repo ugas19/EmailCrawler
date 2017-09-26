@@ -97,10 +97,10 @@ function getEmails($linktouse){
     }
 }
 function sendToDataBase($email,$currentemail){
-    $servername = "db4free.net";
-    $username = "ugas";
-    $password = "vetrute1";
-    $dbname = "gallery";
+    $servername = "sql11.freemysqlhosting.net";
+    $username = "sql11196478";
+    $password = "7R2CnJbtGv";
+    $dbname = "sql11196478";
     $table = "crawlEmails";
     
     // Create connection
