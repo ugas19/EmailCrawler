@@ -1,0 +1,13 @@
+# Thiss file is auto-generated during the composer install
+parameters:
+    database_host: sql11.freemysqlhosting.net
+    database_port: 3306
+    database_name: sql11196478
+    database_user: sql11196478
+    database_password: 7R2CnJbtGv
+
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: ~
+    mailer_password: ~
+    secret: 4da2f6afff96ff6558b7a2cff40906bb07ab4d62
