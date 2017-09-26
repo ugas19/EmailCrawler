@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+{% block stylesheets %}
+<link href="{{ asset('bundles/css/firstpage.css') }}" rel="stylesheet" />
+{% endblock %}
+<h1>{{title}}</h1>
+{{ form_start(form) }}
+<div class="grps">
+{{ form_label(form.task) }}
+</div>
+<div class="grp">
+        {{ form_errors(form.task) }}
+        {{ form_widget(form.task) }}
+        {{ form_widget(form.save) }}
+        
+</div>
+
+
+{{ form_end(form) }}
+</body>
+</html>
