@@ -97,9 +97,9 @@ function getEmails($linktouse){
     }
 }
 function sendToDataBase($email,$currentemail){
-    $servername = "localhost";
+    $servername = "db4free.net";
     $username = "ugas";
-    $password = "root";
+    $password = "vetrute1";
     $dbname = "gallery";
     $table = "crawlEmails";
     
