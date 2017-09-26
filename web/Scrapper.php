@@ -133,14 +133,14 @@ function sendToDataBase($email,$currentemail){
                 VALUES ('$currentemail', '$email')";
                 
                 if ($conn->query($sql) === TRUE) {
-                    //echo "New record created successfully";
+                    
                 } else {
-                   // echo "Error: " . $sql . "<br>" . $conn->error;
+                   
                 }
             }
         
         } else {
-            //echo "Error creating table: " . $conn->error;
+            
         }
     }else {
         //IF TABLE EXIST CHECK IF EMAIL IS ALREADY THERE
@@ -154,9 +154,9 @@ function sendToDataBase($email,$currentemail){
                 VALUES ('$currentemail', '$email')";
                 
                 if ($conn->query($sql) === TRUE) {
-                    //echo "New record created successfully";
+                    
                 } else {
-                   // echo "Error: " . $sql . "<br>" . $conn->error;
+                   
                 }
             }
     }
