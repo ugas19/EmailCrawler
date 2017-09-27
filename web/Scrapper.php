@@ -7,7 +7,7 @@ $var1 = $argv[1];
     preg_match_all("~\.([^\W]+)\.[a-z]{1,4}~", $var1, $out2);
 }else  preg_match_all("~\.|/([^\W]+)\.[a-z]{1,4}~", $var1, $out2);
  $mainLink= substr($out2[0][0], 1);
-test($mainLink);
+//test($mainLink);
  //Check connection type of main url
  if (strpos($var1, "https://") === true)
     {
