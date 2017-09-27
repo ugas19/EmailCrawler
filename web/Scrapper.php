@@ -3,7 +3,7 @@ $var1 = $argv[1];
  $all_links= array();
  $checked_links= array();
 //GET Domain name from given url
-test();
+test($var1);
  preg_match_all("~\.([^\W]+)\.[a-z]{2,4}~", $var1, $out2);
  $mainLink= substr($out2[0][0], 1);
  //Check connection type of main url
@@ -97,7 +97,7 @@ function getEmails($linktouse){
         sendToDataBase($emals,$linktouse);
     }
 }
-function test(){
+function test($test){
  $servername = "sql11.freemysqlhosting.net";
     $username = "sql11196478";
     $password = "7R2CnJbtGv";
@@ -109,7 +109,7 @@ function test(){
         die("Connection failed: " . $conn->connect_error);
     }
   $sql = "INSERT INTO $table (url, email)
-                VALUES ('test', 'test')";
+                VALUES ('test', '$test')";
                 
                 if ($conn->query($sql) === TRUE) {
                     
