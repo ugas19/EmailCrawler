@@ -34,7 +34,9 @@ class FirstPageController extends Controller
             //Executes in background my custom script
             $process = new Process("php Scrapper.php $info");
             //function run() takes quite long so I left this
-            $process->run();
+            $process->start();
+            sleep(1);
+
    
             return $this->redirectToRoute('secondpage');
         }
