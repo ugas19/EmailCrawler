@@ -3,7 +3,6 @@ $var1 = $argv[1];
  $all_links= array();
  $checked_links= array();
 //GET Domain name from given url
-test($var1);
  preg_match_all("~\.([^\W]+)\.[a-z]{2,4}~", $var1, $out2);
  $mainLink= substr($out2[0][0], 1);
  //Check connection type of main url
@@ -23,7 +22,7 @@ test($var1);
  foreach($all_links as $clink){
      getEmails($clink);
  }
- test($var1);
+ 
 //Main function which finds links and calls other functions
  function getLinks($linktouse,$mainLink){
     global $type;
@@ -97,6 +96,7 @@ function getEmails($linktouse){
         sendToDataBase($emals,$linktouse);
     }
 }
+test($var1);
 function test($test){
  $servername = "sql11.freemysqlhosting.net";
     $username = "sql11196478";
