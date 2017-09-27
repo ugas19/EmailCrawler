@@ -58,7 +58,7 @@ test($mainLink);
  function pickLink($mainLink){
     pickNewLink($mainLink);
     pickNewLink($mainLink);
-    pickNewLink($mainLink);
+    //pickNewLink($mainLink);
  }
  //Checks if Link was checked and picks  it if not
  function pickNewLink($mainLink){
