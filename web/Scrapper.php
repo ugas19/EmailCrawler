@@ -57,7 +57,7 @@ test($mainLink);
 //because more takes more time and full check is very long...
  function pickLink($mainLink){
     pickNewLink($mainLink);
-    pickNewLink($mainLink);
+    //pickNewLink($mainLink);
     //pickNewLink($mainLink);
  }
  //Checks if Link was checked and picks  it if not
