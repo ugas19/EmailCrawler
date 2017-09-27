@@ -3,7 +3,9 @@ $var1 = $argv[1];
  $all_links= array();
  $checked_links= array();
 //GET Domain name from given url
- preg_match_all("~\.|/([^\W]+)\.[a-z]{2,4}~", $var1, $out2);
+ if(substr($var1, 0, 11) === 'http://www.' || substr($var1, 0, 12) === 'https://www.'|| substr($var1, 0, 4) === 'www.'){
+    preg_match_all("~\.([^\W]+)\.[a-z]{1,4}~", $var1, $out2);
+}else  preg_match_all("~\.|/([^\W]+)\.[a-z]{1,4}~", $var1, $out2);
  $mainLink= substr($out2[0][0], 1);
  //Check connection type of main url
  if (strpos($var1, "https://") === true)
@@ -55,7 +57,7 @@ $var1 = $argv[1];
  function pickLink($mainLink){
     pickNewLink($mainLink);
     pickNewLink($mainLink);
-   // pickNewLink($mainLink);
+    pickNewLink($mainLink);
  }
  //Checks if Link was checked and picks  it if not
  function pickNewLink($mainLink){
