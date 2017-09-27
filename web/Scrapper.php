@@ -1,5 +1,4 @@
 <?php
-test("works");
 $var1 = $argv[1];
  $all_links= array();
  $checked_links= array();
