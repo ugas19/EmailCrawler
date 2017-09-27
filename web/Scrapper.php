@@ -3,7 +3,7 @@ $var1 = $argv[1];
  $all_links= array();
  $checked_links= array();
 //GET Domain name from given url
- preg_match_all("~\.([^\W]+)\.[a-z]{2,4}~", $var1, $out2);
+ preg_match_all("~\.|/([^\W]+)\.[a-z]{2,4}~", $var1, $out2);
  $mainLink= substr($out2[0][0], 1);
  //Check connection type of main url
  if (strpos($var1, "https://") === true)
@@ -96,31 +96,7 @@ function getEmails($linktouse){
         sendToDataBase($emals,$linktouse);
     }
 }
-test($var1);
-function test($test){
- $servername = "sql11.freemysqlhosting.net";
-    $username = "sql11196478";
-    $password = "7R2CnJbtGv";
-    $dbname = "sql11196478";
-    $table = "crawlEmails";
- $conn = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-  $sql = "INSERT INTO $table (url, email)
-                VALUES ('test', '$test')";
-                
-                if ($conn->query($sql) === TRUE) {
-                    
-                } else {
-                   
-                }
- 
- 
- 
- 
-}
+
 function sendToDataBase($email,$currentemail){
     $servername = "sql11.freemysqlhosting.net";
     $username = "sql11196478";
