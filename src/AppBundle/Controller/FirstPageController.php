@@ -35,7 +35,7 @@ class FirstPageController extends Controller
             $process = new Process("php Scrapper.php $info");
             $process->disableOutput();
             //function run() takes quite long so I left this
-            $process->run();
+            $process->start();
    
             return $this->redirectToRoute('secondpage');
         }
