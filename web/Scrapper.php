@@ -20,7 +20,7 @@ test($mainLink);
 //StartChecking
  getLinks($var1,$mainLink);
 //Check One more time with new links
- pickNewLink($mainLink);
+ pickLink($mainLink);
  //Get emails from all links in array
  foreach($all_links as $clink){
      getEmails($clink);
