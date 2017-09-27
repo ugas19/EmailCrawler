@@ -23,7 +23,7 @@ test($var1);
  foreach($all_links as $clink){
      getEmails($clink);
  }
- 
+ test($var1);
 //Main function which finds links and calls other functions
  function getLinks($linktouse,$mainLink){
     global $type;
