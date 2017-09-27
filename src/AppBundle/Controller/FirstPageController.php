@@ -33,9 +33,8 @@ class FirstPageController extends Controller
             $info = $form["task"]->getData();
             //Executes in background my custom script
             $process = new Process("php Scrapper.php $info");
-            $process->disableOutput();
             //function run() takes quite long so I left this
-            $process->run();
+            $process->start();
    
             return $this->redirectToRoute('secondpage');
         }
